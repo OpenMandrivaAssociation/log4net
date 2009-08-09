@@ -16,7 +16,7 @@ URL:		http://logging.apache.org/log4net/
 License:	ASL 2.0
 Group:		Development/Other
 Version:	1.2.10
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	A .NET framework for logging
 Source:		http://archive.apache.org/dist/incubator/%{name}/%{version}/incubating-%{name}-%{version}.zip
 Source1:	log4net.pc
@@ -55,8 +55,8 @@ nant -buildfile:log4net.build compile-all
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/%{_prefix}/lib//pkgconfig
-cp %{S:1} %{buildroot}/%{_prefix}/lib//pkgconfig
+mkdir -p %{buildroot}/%{_datadir}/pkgconfig
+cp %{S:1} %{buildroot}/%{_datadir}/pkgconfig
 mkdir -p %{buildroot}/%{_prefix}/lib/mono/gac/
 gacutil -i bin/mono/2.0/release/log4net.dll -f -package log4net -root %{buildroot}/%{_prefix}/lib
 gacutil -i bin/mono/1.0/release/log4net.dll -package log4net -root %{buildroot}/%{_prefix}/lib
@@ -72,4 +72,4 @@ rm -rf %{buildroot}
 
 %files devel
 %defattr(-,root,root,-)
-%{_prefix}/lib/pkgconfig/log4net.pc
+%{_datadir}/pkgconfig/log4net.pc
