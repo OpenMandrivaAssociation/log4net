@@ -5,7 +5,7 @@ URL:		http://logging.apache.org/log4net/
 License:	ASL 2.0
 Group:		Development/Other
 Version:	1.2.10
-Release:	%mkrel 3
+Release:	%mkrel 4
 Summary:	A .NET framework for logging
 Source:		http://archive.apache.org/dist/incubator/%{name}/%{version}/incubating-%{name}-%{version}.zip
 Source1:	log4net.pc
@@ -39,8 +39,11 @@ sed -i 's/\r//' LICENSE.txt
 rm -rf bin/
 
 %build
-# create a Strong Name key to allow build to run
+%if %mdvver >= 201100
+cp /etc/pki/mono/mono.snk log4net.snk
+%else
 sn -k log4net.snk
+%endif
 # ASF recommend using nant to build log4net
 nant -buildfile:log4net.build compile-all
 
