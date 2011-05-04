@@ -5,7 +5,7 @@ URL:		http://logging.apache.org/log4net/
 License:	ASL 2.0
 Group:		Development/Other
 Version:	1.2.10
-Release:	%mkrel 4
+Release:	%mkrel 5
 Summary:	A .NET framework for logging
 Source:		http://archive.apache.org/dist/incubator/%{name}/%{version}/incubating-%{name}-%{version}.zip
 Source1:	log4net.pc
