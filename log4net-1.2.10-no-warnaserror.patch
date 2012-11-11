@@ -1,0 +1,12 @@
+diff -p -up log4net-1.2.10/log4net.build~ log4net-1.2.10/log4net.build
+--- log4net-1.2.10/log4net.build~	2006-03-30 13:19:26.000000000 +0200
++++ log4net-1.2.10/log4net.build	2010-10-14 15:50:37.000000000 +0200
+@@ -477,7 +477,7 @@ limitations under the License.
+             </if>
+         </if>
+         <if test="${not temp.build.skip}">
+-            <csc keyfile="${path::combine(log4net.basedir, 'log4net.snk')}" nostdlib="false" noconfig="true" warnaserror="true" target="library" debug="${current.build.debug}" define="${current.build.defines.csc}" output="${current.bin.dir}/log4net.dll" doc="${current.bin.dir}/log4net.xml">
++            <csc keyfile="${path::combine(log4net.basedir, 'log4net.snk')}" nostdlib="false" noconfig="true" target="library" debug="${current.build.debug}" define="${current.build.defines.csc}" output="${current.bin.dir}/log4net.dll" doc="${current.bin.dir}/log4net.xml">
+                 <nowarn>
+                     <!-- workaround for Mono bug #61902 -->
+                     <warning number="0618" />
