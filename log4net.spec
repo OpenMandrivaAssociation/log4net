@@ -5,7 +5,7 @@ URL:		http://logging.apache.org/log4net/
 License:	ASL 2.0
 Group:		Development/Other
 Version:	1.2.10
-Release:	%mkrel 5
+Release:	%mkrel 7
 Summary:	A .NET framework for logging
 Source:		http://archive.apache.org/dist/incubator/%{name}/%{version}/incubating-%{name}-%{version}.zip
 Source1:	log4net.pc
@@ -66,3 +66,28 @@ rm -rf %{buildroot}
 %files devel
 %defattr(-,root,root,-)
 %{_datadir}/pkgconfig/log4net.pc
+
+
+%changelog
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 1.2.10-5mdv2011.0
++ Revision: 666092
+- mass rebuild
+
+* Thu Oct 14 2010 Götz Waschk <waschk@mandriva.org> 1.2.10-4mdv2011.0
++ Revision: 585639
+- sign with central key
+
+* Thu Oct 14 2010 Götz Waschk <waschk@mandriva.org> 1.2.10-3mdv2011.0
++ Revision: 585610
+- patch to ignore build warnings
+- remove .NET 1.0 binary
+
+* Sun Aug 09 2009 Frederik Himpe <fhimpe@mandriva.org> 1.2.10-2mdv2010.0
++ Revision: 412997
+- Fix location of pkgconfig file
+
+* Sun Aug 09 2009 Frederik Himpe <fhimpe@mandriva.org> 1.2.10-1mdv2010.0
++ Revision: 412964
+- First package, based on Fedora's and SUSE's SPECs
+- create log4net
+
