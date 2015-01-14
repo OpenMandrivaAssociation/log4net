@@ -11,6 +11,7 @@ Patch0:		log4net-1.2.10-no-warnaserror.patch
 BuildArch:	noarch
 BuildRequires:	nant
 BuildRequires:	unzip
+BuildRequires:	pkgconfig(mono)
 
 %description
 log4net is a tool to help the programmer output log statements to a
