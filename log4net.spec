@@ -30,10 +30,10 @@ framework to the .NET runtime
 
 %prep
 %setup -q
-%apply_patches
-sed -i 's/\r//' NOTICE.txt
+
+sed -i 's/\r//' NOTICE
 sed -i 's/\r//' README.txt
-sed -i 's/\r//' LICENSE.txt
+sed -i 's/\r//' LICENSE
 # Remove prebuilt dll files
 rm -rf bin/
 
