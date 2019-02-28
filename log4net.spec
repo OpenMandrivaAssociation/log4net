@@ -38,9 +38,9 @@ sed -i 's/\r//' LICENSE
 rm -rf bin/
 
 %build
-cp /etc/pki/mono/mono.snk log4net.snk
 # ASF recommend using nant to build log4net
-nant -buildfile:log4net.build compile-all
+xbuild /property:Configuration=Debug /property:DefineConstants=DEBUG,MONO,STRONG src/log4net.vs2010.csproj
+#nant -buildfile:log4net.build -t:mono-2.0 compile-all
 
 %install
 mkdir -p %{buildroot}/%{_datadir}/pkgconfig
