@@ -2,14 +2,14 @@ Summary:	A .NET framework for logging
 Name:		log4net
 License:	ASL 2.0
 Group:		Development/Other
-Version:	1.2.10
-Release:	17
+Version:	2.0.8
+Release:	1
 Url:		http://logging.apache.org/log4net/
-Source0:	http://archive.apache.org/dist/incubator/%{name}/%{version}/incubating-%{name}-%{version}.zip
+Source0:	http://mirror.reverse.net/pub/apache/logging/log4net/source/log4net-%{version}-src.zip
 Source1:	log4net.pc
-Patch0:		log4net-1.2.10-no-warnaserror.patch
+#Patch0:		log4net-1.2.10-no-warnaserror.patch
 BuildArch:	noarch
-BuildRequires:	nant
+#BuildRequires:	nant
 BuildRequires:	unzip
 BuildRequires:	pkgconfig(mono)
 
