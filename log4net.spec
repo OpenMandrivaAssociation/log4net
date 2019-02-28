@@ -57,8 +57,8 @@ mkdir -p $RPM_BUILD_ROOT/%{_monogacdir}
 gacutil -i build/bin/net/*/debug/log4net.dll -f -package log4net -root ${RPM_BUILD_ROOT}/%{_prefix}/lib
 
 %files
-#{_monogacdir}/log4net
-#{_monodir}/log4net
+%{_libdir}/mono/log4net
+%{_libdir}/mono/gac/log4net
 %doc LICENSE NOTICE README.txt
 
 %files devel
