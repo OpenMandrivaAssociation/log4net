@@ -52,15 +52,16 @@ xbuild /property:Configuration=Debug /property:DefineConstants=DEBUG,MONO,STRONG
 
 %install
 mkdir -p %{buildroot}/%{_datadir}/pkgconfig
-cp %{SOURCE1} %{buildroot}/%{_datadir}/pkgconfig
-mkdir -p %{buildroot}/%{_prefix}/lib/mono/gac/
-gacutil -i bin/mono/2.0/release/log4net.dll -f -package log4net -root %{buildroot}/%{_prefix}/lib
+cp %{S:1} %{buildroot}/%{_datadir}/pkgconfig
+mkdir -p $RPM_BUILD_ROOT/%{_monogacdir}
+gacutil -i build/bin/net/*/debug/log4net.dll -f -package log4net -root ${RPM_BUILD_ROOT}/%{_prefix}/lib
 
 %files
-%{_prefix}/lib/mono/gac/log4net
-%{_prefix}/lib/mono/log4net
-%doc LICENSE.txt NOTICE.txt README.txt
+%{_monogacdir}/log4net
+%{_monodir}/log4net
+%doc LICENSE NOTICE README.txt
 
 %files devel
 %{_datadir}/pkgconfig/log4net.pc
+
 
