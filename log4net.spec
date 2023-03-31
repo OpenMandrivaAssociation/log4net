@@ -3,7 +3,7 @@ Name:		log4net
 License:	ASL 2.0
 Group:		Development/Other
 Version:	2.0.8
-Release:	1
+Release:	2
 Url:		http://logging.apache.org/log4net/
 Source0:	http://mirror.reverse.net/pub/apache/logging/log4net/source/log4net-%{version}-src.zip
 Source1:	log4net.pc
